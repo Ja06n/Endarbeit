@@ -4,6 +4,18 @@ Der praktische Teil umfasst mehrere Python Programme die in Jupyter Notebook ers
 In diesem Git-Hub Repository kann man alle Codeteile dieses praktischen Teils, die man auch in der Arbeit findet, an einem Ort finden. Außerdem wird in dieser Readme-Datei eine kleine Vorführung jedes einzelnen Codes gemacht. Für den Hauptcode ist eine Bildschirmaufnahme erstellt worden für die anderen Codes wird es Screenshots geben, die jeden einzelnen Schritt so ausführlich wie möglich erklärt.
 
   # Konvergenz mit Fibonacci
+  In diesem Programm wird die Konvergenz, also die Annäherung, wenn man bei jeweils zwei aufeinanderfolgenden Fibonacci-Zahlen die große durch die kleine teilt. Ein Beispiel: Nehmer wir die fünfte Fibonacci-    Zahl (5) und die sechste Fibonacci Zahl (8) und teilen nun 8 durch 5 (= 1,6). Führen wir das Programm mal aus und die einzelnen Schritte des Programms werden nähergebracht.
+  
+  1. import matplotlib.pyplot as plt
+     import numpy as np
+     Diese beiden Teile des Codes dienen dazu, die beiden für den Code essentiellen Bibliotheken zu laden, ohne die das Programm einfach Sinnlos wäre.
+  2. def fibonacci(n):
+    fib_sequence = [0, 1]
+    for i in range(2, n):
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+     return fib_sequence
+     In diesem Teil des Codes wird die Fibonacci-Folge definiert, also wird er genutzt um im späteren Verlauf des Codes die Fibonacci-Zahlen zu berechnen.
+  3. 
 
   
   
