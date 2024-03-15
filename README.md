@@ -15,7 +15,30 @@ In diesem Git-Hub Repository kann man alle Codeteile dieses praktischen Teils, d
         fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
      return fib_sequence
      In diesem Teil des Codes wird die Fibonacci-Folge definiert, also wird er genutzt um im späteren Verlauf des Codes die Fibonacci-Zahlen zu berechnen.
-  3. 
+  3. def golden_ratio_convergence_chart(iterations):
+    # Generiere die Fibonacci-Folge bis zur n-ten Iteration
+    fib_sequence = fibonacci(iterations)
+    # Berechne die Verhältnisse zwischen aufeinanderfolgenden Fibonacci-Zahlen
+    # Verhindere Division durch Null mit einer Bedingung für den Fall fib_sequence[i] == 0
+    ratios = [fib_sequence[i + 1] / fib_sequence[i] if fib_sequence[i] != 0 else 0 for i in range(iterations - 1)]
+    # Berechne das goldene Verhältnis
+    golden_ratio = (1 + np.sqrt(5)) / 2
+    # Setze die Größe des Diagramms
+    plt.figure(figsize=(10, 6))
+    # Plotte die Fibonacci-Verhältnisse
+    plt.plot(ratios, marker='o', label='Fibonacci-Verhältnisse')
+    # Zeichne eine gestrichelte Linie für das goldene Verhältnis
+    plt.axhline(y=golden_ratio, color='r', linestyle='--', label='Goldene Verhältnis')
+    # Setze Diagramm-Titel und Achsenbeschriftungen
+    plt.title('Konvergenz der Fibonacci-Verhältnisse gegen das Goldene Verhältnis')
+    plt.xlabel('Iterationen')
+    plt.ylabel('Fibonacci-Verhältnis')
+    # Zeige eine Legende an
+    plt.legend()
+    # Aktiviere das Gitter im Diagramm
+    plt.grid(True)
+    # Zeige das Diagramm an
+    plt.show()
 
   
   
