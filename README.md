@@ -22,5 +22,40 @@ In diesem Git-Hub Repository kann man alle Codeteile dieses praktischen Teils, d
   ![grafik](https://github.com/Ja06n/Endarbeit/assets/137494390/aa279a2c-3583-473b-8141-854c43b67d37)
 
 
-  
-  
+  # Rekursive Formel und Binet-Formel Anwendung
+  Diese beiden Programme machen im gro´ßen und ganzen das selbe, sie generieren die Fibonacci-Folge bis zu einem gewissen Grad. Das entscheidet der Benutzer, indem er wieder in das, sich beim Start des Programms öffnende Fenster, die gewünschte Anzahl an Iterationen eingibt. 
+  ## Die Rekursive Formel
+  1. Zuerst wird mit folgendem Befehl die Rekursive Formel definiert und mit einem if, else Befehl wird die berechnung der Fibonacci-Zahlen deutlicher:
+     def fibonacci_recursive(n):
+    if n <= 1: 
+        return n (Basisfall, wenn n kleiner/gleich 1 ist, wird einfach n zurückgegeben)
+    else:
+        return fibonacci_recursive(n-1) + fibonacci_recursive(n-2) (Ansonsten werden die beiden vorherigen Fibonacci-Zahlen miteinander summiert)
+  2. Im nächsten Schritt wird zuerst die Benutzereingabe definiert und auch Sonderfälle angegeben.
+  3. Dann wird das Programm ausgeführt, nur wenn man auch eine gültige Zahl eingegeben hat! (Zahl muss eine ganze sein)
+  4. Mit der letzten Zeile wird kontrolliert ob das Programm direkt ausgeführt wird und nicht über andere Seiten, whatever importiert wird: if_name_=="_main_":
+
+  ## Die Binet Formel
+  1. Als aller erstes wird die Bibliothek math aufgerufen, um die ganzen Berechnungen zu machen.
+  2. Dann wird die Formel definiert mit folgendem Befehl: (ist zuständig  für die Berechnung der Fibonacci-Zahl)
+     def binet_formula(n):
+    phi = (1 + math.sqrt(5)) / 2
+    psi = (1 - math.sqrt(5)) / 2
+    fib_n = int((math.pow(phi, n) - math.pow(psi, n)) / math.sqrt(5))
+    fib_n_minus_1 = int((math.pow(phi, n - 1) - math.pow(psi, n - 1)) / math.sqrt(5))
+    return fib_n / fib_n_minus_1
+  3. Im dritten Schritt wird die Hauptfunktion definiert.
+     def main():
+    try:
+        position = int(input("Geben Sie die Position in der Fibonacci-Folge ein: ")) (Funktion für die Benutzereingabe)
+        if position < 0:
+            print("Bitte geben Sie eine nicht-negative Position ein.")
+        elif position == 0:
+            print("Der Wert an Position 0 ist 0.")
+        else:
+            result_ratio = binet_formula(position)
+            print(f"Das Verhältnis von Fibonacci-Zahl an Position {position} zu Position {position - 1} ist: {result_ratio:.10f}")
+    except ValueError:
+        print("Ungültige Eingabe. Bitte geben Sie eine ganze Zahl ein.")
+
+  4. Zum Schluss folgt dann wieder folgender Befehl: if_name_=="_main_":
