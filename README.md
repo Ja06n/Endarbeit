@@ -61,6 +61,26 @@ In diesem Git-Hub Repository kann man alle Codeteile dieses praktischen Teils, d
   4. Zum Schluss folgt dann wieder folgender Befehl: if_name_=="_main_":
 
 # Fibonacci-Spirale zeichnen
-Dieses Programm zeichnet die Fibonacci-Spirale. Es wird wierderum nach der Anzahl Iterationen gefragt
+Dieses Programm zeichnet die Fibonacci-Spirale, als erstes werden Quadrate gezeichnet, die in iherer Seitenlänge der Fibonacci-Folge entsprechen und dann wird die Spirale (jeweils ein Viertelkreis pro Quadrat) in die Quadrate gezeichnet. Es wird wierderum nach der Anzahl Iterationen gefragt und das Programm wird ausgeführt.
 
-  1. 
+1. Als aller erstes werden, wie bei jedem Programm, die verschiedenen Bibliotheken geladen. In diesem Fall sind das die turtle-Bibliothek für die Grafik und die math-Bibliothek für die Berechnung der Radien und der Seitenlängen der Quadrate. (import turtle und import math)
+2. wn = turtle.Screen()  
+wn.setup(1000, 800)  -> Fenstergröße
+myTurtle = turtle.Turtle()  
+myTurtle.pensize(3)   -> Stiftgröße
+AnzQuadrate = int(input("Geben Sie die Anzahl der Iterationen ein: ")) -> Anzahl Wiederholungen
+Diese Codezeilen dienen dazu ein Fenster zu erstellen, wo dann später die Spirale gezeichnet wird, es wird die Größe des Fensters angegeben (1000 mal 800 Pixel), die Stiftgröße und es wird wieder nach der Anzahl der Wiederholungen gefragt.
+3. def main(quadrate):
+    valueOne = 0
+    valueTwo = 1
+    fib = 1
+    for i in range(quadrate):
+        myTurtle.right(90)  # Drehe die Turtle um 90 Grad nach rechts
+        drawSq(fib * 20)   # Zeichne ein Quadrat mit Seitenlänge entsprechend der Fibonacci-Zahl
+        fib = valueOne + valueTwo
+        valueOne = valueTwo
+        valueTwo = fib
+   Man definiert die Hauptfunktion, die zur Berechnung der Fibonacci-Zahlen zum zeichnen der Quadrate dient.
+
+4. 
+
