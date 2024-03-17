@@ -108,18 +108,26 @@ Diese Codezeilen dienen dazu ein Fenster zu erstellen, wo dann später die Spira
 
     Man definiert die Spirale, also wie sie gezeichnet wird.
 
-6. def arcLine(n, laenge, winkel):
-    for i in range(n):
-        myTurtle.forward(laenge)  
-        myTurtle.left(winkel)   
-def arc(r, winkel):
-    bogenlaenge = 2 * math.pi * r * abs(winkel) / 360  -> Dient zur berechnung der Bogenlänge
-    n = int(bogenlaenge / 4) + 1 
-    schrittlaenge = bogenlaenge / n
-    schritt_winkel = float(winkel) / n
-    myTurtle.left(schritt_winkel / 2)
-    arcLine(n, schrittlaenge, schritt_winkel)
-    myTurtle.right(schritt_winkel / 2)
+6. def arcLine(n, laenge, winkel): 
+    for i in range(n): 
+        myTurtle.forward(laenge) 
+        myTurtle.left(winkel) 
+def arc(r, winkel): 
+    bogenlaenge = 2 * math.pi * r * abs(winkel) / 360   -> Dient zur berechnung der Bogenlänge
+    n = int(bogenlaenge / 4) + 1  
+    schrittlaenge = bogenlaenge / n 
+    schritt_winkel = float(winkel) / n 
+    myTurtle.left(schritt_winkel / 2) 
+    arcLine(n, schrittlaenge, schritt_winkel) 
+    myTurtle.right(schritt_winkel / 2) 
 
    Diese beiden Definitionen sind dafür zuständig die Spirale zu zeichnen beziehungsweise den Bogen.
+
+### Die Hauptprogrammschleife
+7. main(AnzQuadrate) -> Rufe die Hauptfunktion auf, um die Fibonacci-Quadrate zu zeichnen
+sprial(AnzQuadrate) -> Rufe die Funktion auf, um die rote Spirale zu zeichnen
+wn.exitonclick() -> Schließe das Turtle-Fenster, wenn es angeklickt wird
+
+Hier ein Beispiel mit der Zahl 6:
+
 
