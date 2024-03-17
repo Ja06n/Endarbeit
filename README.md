@@ -129,5 +129,6 @@ sprial(AnzQuadrate) -> Rufe die Funktion auf, um die rote Spirale zu zeichnen
 wn.exitonclick() -> Schließe das Turtle-Fenster, wenn es angeklickt wird
 
 Hier ein Beispiel mit der Zahl 6:
+![grafik](https://github.com/Ja06n/Endarbeit/assets/137494390/368ff134-3716-4b39-a210-e4936771e5e0)
 
 
