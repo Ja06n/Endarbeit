@@ -70,17 +70,18 @@ myTurtle = turtle.Turtle()
 myTurtle.pensize(3)   -> Stiftgröße
 AnzQuadrate = int(input("Geben Sie die Anzahl der Iterationen ein: ")) -> Anzahl Wiederholungen
 Diese Codezeilen dienen dazu ein Fenster zu erstellen, wo dann später die Spirale gezeichnet wird, es wird die Größe des Fensters angegeben (1000 mal 800 Pixel), die Stiftgröße und es wird wieder nach der Anzahl der Wiederholungen gefragt.
-3. def main(quadrate):
+
+4. def main(quadrate):
     valueOne = 0
     valueTwo = 1
     fib = 1
     for i in range(quadrate):
-        myTurtle.right(90)  # Drehe die Turtle um 90 Grad nach rechts
-        drawSq(fib * 20)   # Zeichne ein Quadrat mit Seitenlänge entsprechend der Fibonacci-Zahl
+        myTurtle.right(90) 
+        drawSq(fib * 20)   
         fib = valueOne + valueTwo
         valueOne = valueTwo
         valueTwo = fib
    Man definiert die Hauptfunktion, die zur Berechnung der Fibonacci-Zahlen zum zeichnen der Quadrate dient.
 
-4. 
+5. 
 
