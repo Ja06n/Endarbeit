@@ -59,3 +59,8 @@ In diesem Git-Hub Repository kann man alle Codeteile dieses praktischen Teils, d
         print("Ungültige Eingabe. Bitte geben Sie eine ganze Zahl ein.")
 
   4. Zum Schluss folgt dann wieder folgender Befehl: if_name_=="_main_":
+
+# Fibonacci-Spirale zeichnen
+Dieses Programm zeichnet die Fibonacci-Spirale. Es wird wierderum nach der Anzahl Iterationen gefragt
+
+  1. 
