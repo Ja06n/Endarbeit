@@ -137,5 +137,14 @@ Hier ein Beispiel mit der Zahl 6:
 ![grafik](https://github.com/Ja06n/Endarbeit/assets/137494390/368ff134-3716-4b39-a210-e4936771e5e0)
 
 
+## Der Maincode meiner Endarbeit:
 
+Folgende Bibliotheken werden benötigt:
+
+import cv2                -> OpenCV-Bibliothek für die Bildverarbeitung
+import numpy as np          -> NumPy für numerische Berechnungen
+from tkinter import filedialog  -> Tkinter-Modul für den Dateidialog
+import tkinter as tk         -> Tkinter als Abkürzung für die Verwendung des Moduls
+
+Zur Erklärung und Demonstration wird eine kleine Bildschirmaufnahme gemacht. (Die einzelnen Codezeilen sind auch schon in der Datei erklärt!)
 
