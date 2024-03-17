@@ -71,7 +71,7 @@ myTurtle.pensize(3)   -> Stiftgröße
 AnzQuadrate = int(input("Geben Sie die Anzahl der Iterationen ein: ")) -> Anzahl Wiederholungen
 Diese Codezeilen dienen dazu ein Fenster zu erstellen, wo dann später die Spirale gezeichnet wird, es wird die Größe des Fensters angegeben (1000 mal 800 Pixel), die Stiftgröße und es wird wieder nach der Anzahl der Wiederholungen gefragt.
 
-4. def main(quadrate):
+3. def main(quadrate):
     valueOne = 0
     valueTwo = 1
     fib = 1
@@ -81,7 +81,45 @@ Diese Codezeilen dienen dazu ein Fenster zu erstellen, wo dann später die Spira
         fib = valueOne + valueTwo
         valueOne = valueTwo
         valueTwo = fib
-   Man definiert die Hauptfunktion, die zur Berechnung der Fibonacci-Zahlen zum zeichnen der Quadrate dient.
+   Man definiert die Hauptfunktion, die zur Berechnung der Fibonacci-Zahlen zum zeichnen der Seitenlängen der Quadrate dient.
 
-5. 
+4. def drawSq(seitenlaenge): 
+    for n in range(6): -> Die 6 dient dazu, dass der Cursor wieder an der richtigen Stelle zu zeichnen anfängt. Der Cursor fährt sozusagen 6 Linien.
+        myTurtle.forward(seitenlaenge)  Bewege die Turtle vorwärts um die Seitenlänge
+        myTurtle.left(90)   Drehe die Turtle um 90 Grad nach links
+   Man definiert die Funktion um die Quadrate zu zeichnen, die bereits in der vorherigen Funktion berechnet wurden.
+
+5. def sprial(quadrate):
+    myTurtle.color("red")  # Setze die Stiftfarbe auf Rot
+    myTurtle.speed(10)      # Setze die Zeichengeschwindigkeit auf 2 (mittlere Geschwindigkeit)
+    angle = 90
+    valueOne = 0
+    valueTwo = 1
+    fib = 1
+    myTurtle.right(90 + (quadrate % 4) * 90)     
+    myTurtle.penup() 
+    myTurtle.setpos(0, 0)  
+    myTurtle.pendown()    
+    for i in range(quadrate): -> Das hier ist eine Schleife, die bewirkt, dass man egal welche Zahl angeben kann und die Spirale trotzdem nach den Funktionen und Definitionen gezeichnet werden kann.
+        arc(fib * 20, angle)  -> Berechnet die Winkel zum zeichnen der Spirale.
+        fib = valueOne + valueTwo
+        valueOne = valueTwo
+        valueTwo = fib
+
+    Man definiert die Spirale, also wie sie gezeichnet wird.
+
+6. def arcLine(n, laenge, winkel):
+    for i in range(n):
+        myTurtle.forward(laenge)  
+        myTurtle.left(winkel)   
+def arc(r, winkel):
+    bogenlaenge = 2 * math.pi * r * abs(winkel) / 360  -> Dient zur berechnung der Bogenlänge
+    n = int(bogenlaenge / 4) + 1 
+    schrittlaenge = bogenlaenge / n
+    schritt_winkel = float(winkel) / n
+    myTurtle.left(schritt_winkel / 2)
+    arcLine(n, schrittlaenge, schritt_winkel)
+    myTurtle.right(schritt_winkel / 2)
+
+   Diese beiden Definitionen sind dafür zuständig die Spirale zu zeichnen beziehungsweise den Bogen.
 
