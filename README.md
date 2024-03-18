@@ -148,3 +148,9 @@ import tkinter as tk         -> Tkinter als Abkürzung für die Verwendung des M
 
 Zur Erklärung und Demonstration wird eine kleine Bildschirmaufnahme gemacht. (Die einzelnen Codezeilen sind auch schon in der Datei erklärt!)
 
+
+https://github.com/Ja06n/Endarbeit/assets/137494390/cebc533c-689a-4bdd-852b-e1afa79e7fd1
+
+
+https://github.com/Ja06n/Endarbeit/assets/137494390/503333f9-fb53-4b42-b924-d0e6cd49dae8
+
